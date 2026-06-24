@@ -1,0 +1,23 @@
+stages:
+    - build
+    - test
+    - push_to_dockerhub
+    - deploy
+
+
+
+build-job:
+    stage: build
+    script:
+        - docker build -t node-app:latest
+    tags:
+        - dev
+
+test-job:
+     stage: test
+     script:
+         - echo "testing jobs"
+     tags:
+        - dev
+
+
