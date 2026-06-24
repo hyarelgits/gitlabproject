@@ -1,8 +1,16 @@
 stages:
+  - clone
   - build
   - test
   - push_to_dockerhub
   - deploy
+
+git_clone:
+  stage: clone
+  script:
+    - git clone https://github.com/hyarelgits/gitlabproject1
+  tags:
+    - dev
 
 build_job:
   stage: build
