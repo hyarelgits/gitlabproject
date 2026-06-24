@@ -8,7 +8,7 @@ stages:
 git_clone:
   stage: clone
   script:
-    - git clone https://github.com/hyarelgits/gitlabproject1
+    - git clone https://github.com/hyarelgits/gitlabproject.git
   tags:
     - dev
 
